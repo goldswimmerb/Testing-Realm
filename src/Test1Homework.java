@@ -27,9 +27,10 @@ public class Test1Homework {
 				pos = i;}
 		}
 		return pos;}
-		
+	
 	
 	public static void main(String[] args){
+		System.out.println("HI BRANDON!");
 		System.out.println(getChargingCost(23, 3));
 		System.out.println(2%24);
 		System.out.println(getChargeStartTime(5));

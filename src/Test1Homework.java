@@ -1,5 +1,5 @@
 
-public class Test1Homework {
+public class Test1Homework{
 	public static int[] rateTable = {50,60,160,60,80,100,100,120,150,150,150,200,40,240,220,220,200,200,180,180,140,100,80,60};
 	
 	static int getChargingCost(int startHour, int chargeTime){
@@ -30,10 +30,11 @@ public class Test1Homework {
 	
 	
 	public static void main(String[] args){
-		System.out.println("HI BRANDON!");
-		System.out.println(getChargingCost(23, 3));
-		System.out.println(2%24);
-		System.out.println(getChargeStartTime(5));
-		System.out.println(getChargingCost(getChargeStartTime(5),5));
+		//System.out.println(getChargingCost(23, 1));
+		System.out.println(getChargeStartTime(15));
+		//System.out.println(getChargingCost(getChargeStartTime(5),5));
+	//	while(true){
+			//.getRuntime().exec(new String[]{"javaw","-cp",System.getProperty("java.class.path"),"Test1Homework"});
+	//	}
 	}
 }

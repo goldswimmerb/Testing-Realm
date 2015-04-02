@@ -86,3 +86,19 @@ public static void grayscale() {
 		}
 	}
 
+6:
+public static void fixUnderWater() {
+		Pixel[][] pixels = this.getPixels2D();
+		int avg = 0;
+		for (Pixel[] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				pixelObj.setRed(20);
+				pixelObj.setGreen(20);
+				pixelObj.setBlue(200);
+
+			}
+		}
+	}
+	
+Sec6:
+

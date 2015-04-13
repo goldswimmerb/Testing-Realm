@@ -88,17 +88,76 @@ public static void grayscale() {
 
 6:
 public static void fixUnderWater() {
-		Pixel[][] pixels = this.getPixels2D();
-		int avg = 0;
-		for (Pixel[] rowArray : pixels) {
-			for (Pixel pixelObj : rowArray) {
-				pixelObj.setRed(20);
-				pixelObj.setGreen(20);
-				pixelObj.setBlue(200);
+	Pixel[][] pixels = this.getPixels2D();
+	int avg = 0;
+	for (Pixel[] rowArray : pixels) {
+		for (Pixel pixelObj : rowArray) {
+			pixelObj.setRed(20);
+			pixelObj.setGreen(20);
+			pixelObj.setBlue(200);
 
-			}
 		}
 	}
+}
 	
 Sec6:
+1. 
+public static void mirrorVerticalRightToLeft(){
+	Pixel[][] pixels = this.getPixels2D();
+	Pixel leftPixel = null;
+	Pixel rightPixel = null;
+	int width = pixels[0].length;
+	for(int i = 0; i < pixels.length; i++){
+		for(int j = width-1; j > width/2; j--){
+			leftPixel = pixels[i][j];
+			rightPixel = pixels[i][width-1-j];
+			rightPixel.setColor(leftPixel.getColor());
+		}
+	}
+}
+
+2.
+public static void mirrorHorizontal(){
+	Pixel[][] pixels = this.getPixels2D();
+	Pixel topPixel = null;
+	Pixel botPixel = null;
+	int height = pixels.length;
+	for(int i = 0; i < height / 2; i++){
+		for(int j = 0; j < pixels.length; j++){
+			topPixel = pixels[i][j];
+			botPixel = pixels[i][height-1-j];
+			botPixel.setColor(leftPixel.getColor());
+		}
+	}
+}
+
+3.
+public static void mirrorHorizontalBotToTop(){
+	Pixel[][] pixels = this.getPixels2D();
+	Pixel topPixel = null;
+	Pixel botPixel = null;
+	int height = pixels.length;
+	for(int i = height-1; i > height/2; i--){
+		for(int j = 0; j < pixels.length; j++){
+			topPixel = pixels[i][j];
+			botPixel = pixels[i][height-1-j];
+			botPixel.setColor(leftPixel.getColor());
+		}
+	}
+}
+
+4.
+public static void mirrorDiagonal(){
+	Pixel[][] pixels = this.getPixels2D();
+	Pixel leftPixel = null;
+	Pixel rightPixel = null;
+	int diagLength = Math.sqrt((pixels[0].length*pixels[0].length)+(pixels.length*pixels.length));
+	for(int row = 0; row < pixels.length; row++){
+		for(int j = 0; j < i; j++){
+			leftPixel = pixels[row][j];
+			rightPixel = pixels[row][height-1-j];
+			rightPixel.setColor(leftPixel.getColor());
+		}
+	}
+}
 
